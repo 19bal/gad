@@ -1,4 +1,4 @@
-gait ile ilgili çalışmalara buraya.
+gait ile ilgili çalışmalara buraya. **işler** bölümüne bakalım.
 
 ## ilgili
 
