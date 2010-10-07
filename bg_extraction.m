@@ -1,63 +1,42 @@
 clear all
-mov=aviread('output.avi');
 
-
-f(:,:,:,1)=frame2im(mov(1));
-
-
-
+mov=aviread('output.avi');   % output.avi dosyasindan video gÃ¶rÃ¼ntÃ¼sÃ¼ alÄ±nÄ±r ve framelere bÃ¶lÃ¼nÃ¼r.
 
 for i=1:150
     
-    flag1(:,:,:,i)=frame2im(mov(i));
+    flag1(:,:,:,i)=frame2im(mov(i));  % frameler image olarak dÃ¼zenlenir.
 
-    frames(:,:,:,i) = imcrop(flag1(:,:,:,i), [38 73 252 157]);
-
-
+    frames(:,:,:,i) = imcrop(flag1(:,:,:,i), [38 73 252 157]);  % Gerekli olan yerler kalacak sekilde resimler kirpilir.
     
     flag1(:,:,:,i)=frame2im(mov(i));
 
     frames(:,:,:,i) = imcrop(flag1(:,:,:,i), [38 73 252 157]);
 
-
-
-  
-    
+    p1(:,:,i)=frames(:,:,1,i);    % kirmizi 
         
-
-        
-        p1(:,:,i)=frames(:,:,1,i);    % kırmızı 
-        
-        
-        p2(:,:,i)=frames(:,:,2,i);    %yeşil
+    p2(:,:,i)=frames(:,:,2,i);    %yesil
    
-         
-        p3(:,:,i)=frames(:,:,3,i);    %mavi
-         
+    p3(:,:,i)=frames(:,:,3,i);    %mavi
+       
+    %%%MASKELEME Ä°SLEMÄ° %%%%  
     
-        rmask1(:,:,i)=(p1(:,:,i)>30);    %kırmızı maske 1 
+    rmask1(:,:,i)=(p1(:,:,i)>30);    %kirmizi maske 1 
         
-        rmask2(:,:,i)=(p1(:,:,i)<94);    
+    rmask2(:,:,i)=(p1(:,:,i)<94);    
         
+    rmask(:,:,i)=rmask2(:,:,i).*rmask1(:,:,i);
+        
+    gmask(:,:,i)=(p2(:,:,i)>115);
+        
+    bmask(:,:,i)=(p3(:,:,i)>69);
+        
+    mask(:,:,i)=bmask(:,:,i).*rmask(:,:,i).*gmask(:,:,i);
+        
+    %%%%%%
+
+    mask(:,:,i) = medfilt2(mask(:,:,i),[4 4]);  %Maske 4x4'lÃ¼k median filtreden gecirilir.
       
-        rmask(:,:,i)=rmask2(:,:,i).*rmask1(:,:,i);
-        
-        gmask(:,:,i)=(p2(:,:,i)>115);
-        
-       
-        
-      
-        
-        bmask(:,:,i)=(p3(:,:,i)>69);
-        
-        
-        
-       
-         
-        mask(:,:,i)=bmask(:,:,i).*rmask(:,:,i).*gmask(:,:,i);
-        mask(:,:,i) = medfilt2(mask(:,:,i),[4 4]);
-      
-        mask(:,:,i) = imfill(mask(:,:,i),'holes');
+    mask(:,:,i) = imfill(mask(:,:,i),'holes');  %Bosluk doldurma islemi yapilir
         
     end
     
