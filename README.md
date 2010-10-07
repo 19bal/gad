@@ -1,7 +1,7 @@
 gait ile ilgili çalışmalara buraya. **işler** bölümüne bakalım.
 
 
-Framelerin olduğu rar dosyası ' http://github.com/19bal/gait/downloads ' adresinde mevcuttur.
+Framelerin ve video görüntüsünün olduğu rar dosyaları ' http://github.com/19bal/gait/downloads ' adresinde mevcuttur.
 ## ilgili
 
 @ilke.tunali
