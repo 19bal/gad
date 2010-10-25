@@ -2,7 +2,7 @@ ilgi: @erdem
 
 Perde kurulması, çekimler yapılmasıyla ilgili yapılanlar ve gerçeklemeler vs buraya konulacak.
 
-![foo](chroma1.png)
+![foo](croma1.png)
 
 Bu resimleri [The Green Screen Handbook] adinda bir kitaptan aldim.
 
