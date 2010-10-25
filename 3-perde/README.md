@@ -1,4 +1,5 @@
 ilgi: @erdem
+iş: #4
 
 Perde kurulması, çekimler yapılmasıyla ilgili yapılanlar ve gerçeklemeler vs buraya konulacak.
 
