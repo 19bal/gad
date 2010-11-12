@@ -1,8 +1,9 @@
 ilgi: @erdem
+\#Num: #4
 
 Perde kurulması, çekimler yapılmasıyla ilgili yapılanlar ve gerçeklemeler vs buraya konulacak.
 
-![foo](./croma1.png)
+![foo](http://github.com/19bal/gait/raw/master/3-perde/croma1.png)
 
 Bu resimleri [The Green Screen Handbook] adinda bir kitaptan aldim.
 
