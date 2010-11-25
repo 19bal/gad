@@ -219,7 +219,7 @@ for i = 1:n*m
             flag2=1;
             cur_crop(1)=j;
             cur_crop(3)=cur_crop(3)-counter3+1;
-            lastcrop2{i}=cur_crop;
+            F{i}=cur_crop;
             j=j-1;
 
         end
@@ -246,7 +246,7 @@ for i = 1:n*m
             
             flag2=1;
             cur_crop(3)=cur_crop(3)-counter2;
-            lastcrop2{i}=cur_crop;
+            F{i}=cur_crop;
             
         
             end
