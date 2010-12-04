@@ -80,7 +80,10 @@ end
 for c=1:nc
     for r=1:nr
         sbw = imcrop(bw, BB(r, c, :));
-        b = bobox(sbw);
+        b = bobox(sbw) - 1;
+        
+        if b(3) == 0,   b(3) = 1;   end
+        if b(4) == 0,   b(4) = 1;   end
         
         BB(r, c, :) = [BB(r, c, 1) + b(1), ...
                        BB(r, c, 2) + b(2), ...
