@@ -19,7 +19,7 @@ for f = 1:sz,
     imgnm = DIR(f).name;    
     bw = imread(strcat(dbnm, imgnm));
     
-    BB = fe_bauckhage09(bw, nr, nc, true, false);
+    BB = fe_bauckhage09(bw, nr, nc, true, true);
     
     if dbg
         figure(1);
