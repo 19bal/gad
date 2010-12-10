@@ -1,3 +1,4 @@
+## 
 Human motion tracking
 http://www.cs.brown.edu/~black/Software/SidenbladhMatlab.tar.gz
 
@@ -14,3 +15,10 @@ European Conference on Computer Vision, D. Vernon (Ed.), Springer Verlag, LNCS 1
 (postscript)(pdf), (abstract)
 
 Software. (Note: if you uncompress and untar this on a PC using Winzip, the path names may be lost which will cause Matlab to fail when you load the .mat files.  Instead uncompress/untar using gunzip and tar.) 
+
+
+## eigentracking
+
+- pdf: http://www.cs.brown.edu/~black/eigenTrack.html
+- data: http://www.cs.brown.edu/~black/images.html
+
