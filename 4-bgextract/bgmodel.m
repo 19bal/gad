@@ -7,7 +7,9 @@ function bg = bgmodel(dbnm, dbg)
 %   bg.R.M
 %   bg.R.H.M
 
-if ~exist('BGMODEL.mat', 'file')
+mkdir(pathos('_bkp/'));
+
+if ~exist(pathos('_bkp/BGMODEL.mat'), 'file')
     DIR = dir(strcat(dbnm, '*.png'));
     Nbg = 1:32;       % bg frame indisleri
 
@@ -31,7 +33,10 @@ if ~exist('BGMODEL.mat', 'file')
     bg.G.V.M = bg_V_mn(:,:,1);  bg.G.V.D = bg_H_dev(:,:,1);
     bg.B.V.M = bg_V_mn(:,:,1);  bg.B.V.D = bg_H_dev(:,:,1);
     
-    save BGMODEL bg
+    sk = pwd;
+        cd(pathos('_bkp/'));
+        save BGMODEL bg
+    cd(sk);     
 else
-    load BGMODEL
+    load(pathos('_bkp/BGMODEL.mat'));
 end

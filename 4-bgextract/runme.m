@@ -1,18 +1,19 @@
 % demo gait analysis
 clear all; close all;  clc;
 dbg = true;
-isCreateBW = false;
 
-% % dbnm = strcat(DB_ROOT(), 'gait/soton/');
-dbnm = '../../../db/gait/';
-bw_dbnm = strcat(dbnm, 'bw/');
+dbnm = pathos('../../db/gait/');
+mkdir(pathos('_db/'));
+dbnm_bw = pathos('_db/bw/');
+
+isCreateBW = ~length(dir(strcat(dbnm_bw, '*.png')));
 
 if isCreateBW
     bg = bgmodel(dbnm, dbg);
-    bw_dbnm = frm2bw_db(dbnm, bg, dbg);
+    frm2bw_db(dbnm, dbnm_bw, bg, dbg);
 end
 
-DIR = dir(strcat(bw_dbnm, '*.png'));
+DIR = dir(strcat(dbnm_bw, '*.png'));
 sz = length(DIR);
 
 for f=1:sz,
@@ -21,7 +22,7 @@ for f=1:sz,
     end
     
     imgnm = DIR(f).name;    
-    bw = imread(strcat(bw_dbnm, imgnm));
+    bw = imread(strcat(dbnm_bw, imgnm));
     
     frm(:,:,f) = bw;         
 
