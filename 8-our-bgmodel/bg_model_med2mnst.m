@@ -1,3 +1,6 @@
+function bg_model_med2mnst()
+% function bg_model_med2mnst()
+
 % demo gait analysis
 clear all; close all;  clc;
 dbg = true;
