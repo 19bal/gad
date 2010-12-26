@@ -39,9 +39,9 @@ for f=1:200 %sz,
     if dbg,
         figure(1);
             subplot(221),   imshow(fr);                 title('su anki kare');
-            subplot(222),   imshow(bg);                 title('median bgmodel');
-            subplot(223),   imshow(uint8(255*bw));     title('bw');
-            subplot(224),   imshow(bw(:,:,1));          title('bw:R');
+            subplot(222),   imshow(uint8(255*bw));      title('bw');
+            subplot(223),   imshow(uint8(mn));          title('mn');
+            subplot(224),   imshow(uint8(10*abs(st)));  title('st');
         drawnow;
     end
 end

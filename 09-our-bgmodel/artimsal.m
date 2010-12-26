@@ -17,7 +17,8 @@ for x=1:W
                 m = (m * n + g) / (n + 1);
                 
                 Sx = m * n;
-                SSx = (n-1) * s^2 + Sx^2 / n;
+                if n == 0,  SSx = 0;
+                else,       SSx = (n-1) * s^2 + Sx^2 / n;   end
                 
                 Sx = Sx + g;
                 SSx = SSx + g^2;
