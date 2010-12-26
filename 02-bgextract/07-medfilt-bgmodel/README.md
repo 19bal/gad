@@ -2,7 +2,7 @@ zamanda median filtre uygulama temelli bgmodel-bgextract çalışması
 
 ## Rapor
 
-önce elimizde renkli video vardı,
+önce elimizde renkli [video](http://gps-tsc.upc.es/imatge/_jl/Tracking/challenge.avi) vardı,
 
 ![giriş video](https://github.com/19bal/shadow/raw/master/img/surveillance.gif)
 
