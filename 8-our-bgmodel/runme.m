@@ -6,8 +6,8 @@ mkdir(pathos('_db/'));
 mkdir(pathos('_bkp/'));
 
 % resimleri buraya koy
-dbnm = pathos('_db/orj/');
-imgnm_bg = pathos('_bkp/bg_model.png');
+dbnm = pathos('_db/orj/');				% surveillance:RGB resimler
+imgnm_bg = pathos('_bkp/bg_model.png');	% 19bal/shadow:07-medfilt-bgmodel in urettigi
 
 bg = imread(imgnm_bg);
 
@@ -40,7 +40,7 @@ for f=1:200 %sz,
         figure(1);
             subplot(221),   imshow(fr);                 title('su anki kare');
             subplot(222),   imshow(bg);                 title('median bgmodel');
-            subplot(223),   imshow(uint8(255*bwr));     title('bw');
+            subplot(223),   imshow(uint8(255*bw));     title('bw');
             subplot(224),   imshow(bw(:,:,1));          title('bw:R');
         drawnow;
     end
