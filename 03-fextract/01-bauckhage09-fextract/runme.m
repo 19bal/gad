@@ -1,7 +1,7 @@
 close all;  clear all;  clc;
 
 %%%%%%%%%%%%%%%% D O   N O T   E D I T   M E %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-LIB_PATH = sprintf('..%slib%s', filesep,filesep);                         %
+LIB_PATH = sprintf('..%s..%slib%s', filesep,filesep,filesep);                         %
 addpath(LIB_PATH,'-end');                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -19,7 +19,7 @@ for f = 1:sz,
     imgnm = DIR(f).name;    
     bw = imread(strcat(dbnm, imgnm));
     
-    BB = fe_bauckhage09(bw, nr, nc, true, true);
+    BB = fe_bauckhage09(bw, nr, nc, true, false);
     
     if dbg
         figure(1);
