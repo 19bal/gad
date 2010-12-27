@@ -9,6 +9,9 @@ mkdir(pathos('_bkp/'));
 dbnm = pathos('_db/orj/');				% surveillance:RGB resimler
 imgnm_bg = pathos('_bkp/bg_model.png');	% 19bal/shadow:07-medfilt-bgmodel in urettigi
 
+imgnm_mn = pathos('_bkp/bg_model_mean.png');
+fnm_st = pathos('_bkp/bg_model_std.mat');
+
 bg = imread(imgnm_bg);
 
 T = 10;
@@ -46,16 +49,6 @@ for f=1:200 %sz,
     end
 end
 
-% % if dbg
-% %     figure(2),
-% %     subplot(121), imshow(uint8(bg_mn));                     title('mean')
-% %     subplot(122), imshow(uint8(255*bg_st / min(bg_st(:)))); title('std')
-% %     drawnow;
-% %     
-% %     figure(3); 
-% %     imshow( uint8(10*abs(double(bg) - double(bg_mn) )));    title('fark: median - mean')
-% % end
-% % 
-% % imwrite(uint8(bg_mn), imgnm_bg_mn);
-% % 
-% % save(fnm_bg_st, 'bg_st');
+imwrite(uint8(mn), imgnm_mn);
+save(fnm_st, 'st');
+
