@@ -6,7 +6,8 @@ Framelerin ve video görüntüsünün olduğu rar dosyaları ' http://github.com
 
 #### Database
 
-- utah universitesinin [abnormality dbsi](http://library.med.utah.edu/neurologicexam/html/download_by_exam.html#gait_ab_01)
+- [Normal](http://library.med.utah.edu/neurologicexam/zips/QT_STANDARD/gait_n_all.zip) x [abnormal](http://library.med.utah.edu/neurologicexam/zips/QT_STANDARD/gait_ab_all.zip)
+
 - CGA [Gait Broser](http://www.univie.ac.at/cga/GaitBrowser/)
 
 #### ilgili
