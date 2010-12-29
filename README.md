@@ -16,4 +16,6 @@ Framelerin ve video görüntüsünün olduğu rar dosyaları ' http://github.com
 
 #### Okuma Listesi
 
-ilgili bib dosyasında 
+- ilgili bib dosyasında 
+
+- http://stanford25.wordpress.com/gait-abnormalities/
