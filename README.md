@@ -13,3 +13,6 @@ Framelerin ve video görüntüsünün olduğu rar dosyaları ' http://github.com
 
 @ilke.tunali
 
+#### Okuma Listesi
+
+ilgili bib dosyasında 
