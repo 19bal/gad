@@ -6,7 +6,8 @@ BB = fe_bauckhage09(bw, nr, nc, dbg, false);
 [R, C, t] = size(BB);
 [H, W] = size(bw);
 
-s = regionprops(bwlabel(bw), 'centroid');
+% bwlabel yerine double: siluet tek nesne biciminde degil!
+s = regionprops(double(bw), 'centroid');
 centroid = cat(1, s.Centroid);
 
 Dist = zeros(2*C + 2*(R - 2) + 1, 1);

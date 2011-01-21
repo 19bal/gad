@@ -10,8 +10,8 @@ function bg = bgmodel(dbnm, dbg)
 mkdir(pathos('_bkp/'));
 
 if ~exist(pathos('_bkp/BGMODEL.mat'), 'file')
-    DIR = dir(strcat(dbnm, '*.png'));
-    Nbg = 1:32;       % bg frame indisleri
+    DIR = dir(strcat(dbnm, '*.bmp'));
+    Nbg = 1:11;       % bg frame indisleri
 
     [bg_mn, bg_dev] = bg_color(Nbg, DIR, dbnm, dbg);
     [bg_H_mn, bg_V_mn, bg_H_dev, bg_V_dev] = bg_edge(Nbg, DIR, dbnm);
