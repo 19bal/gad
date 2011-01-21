@@ -3,19 +3,22 @@ clear all;  close all;  clc;
 
 dbg = true;
 dbnm = pathos('_db/orj/');
-fnm_mat = pathos('_db/fosmne1gt.xml');
+fnm_xml = pathos('_db/fosmne1gt.xml');
 
-box_caviar = parser_caviar_box(fnm_mat, dbg);
+DIR = dir(strcat(dbnm, '*.png'));
+sz = length(DIR);
+
+if sz == 0 | ~exist(fnm_xml),
+    error(sprintf('"%s" veya "%s" eksik. README.md yi oku.\n', dbnm,fnm_xml));
+end
+
+box_caviar = parser_caviar_box(fnm_xml, dbg);
 
 % caviar notasyonundan Matlab:RECT notasyonuna donustur
 rect(:, 1) = box_caviar(:, 1) - round(box_caviar(:,3)/2);
 rect(:, 2) = box_caviar(:, 2) - round(box_caviar(:,4)/2);
 rect(:, 3) = box_caviar(:, 3);
 rect(:, 4) = box_caviar(:, 4);
-
-DIR = dir(strcat(dbnm, '*.png'));
-
-sz = length(DIR);
 
 for f=1:10:sz%1:sz
     if dbg, fprintf('%04d. fram isleniyor...\n', f);    end
