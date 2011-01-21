@@ -1,10 +1,16 @@
+function box_caviar = parser_caviar_box(fnm, dbg);
+% function box_caviar = parser_caviar_box(fnm, dbg);
+% 
 % CAVIAR DB'nin xml dosyasindan box'i parse eder
-clear all; close all;   clc;
-warning off all;
 
-dbg = true;
+[pstr, nm, ext] = fileparts(fnm);
+fnm_mat = pathos(strcat(pstr, '/', nm, '.mat'));
 
-fnm = pathos('_db/fosmne1gt.xml');
+if exist(fnm_mat)
+    load(fnm_mat);
+    return
+end
+
 str = fileread(fnm);  %xml'i okur
 
 v = xml_parseany( str );  %toolbox'?n bir ?zelli?i, okunan xml'in
@@ -28,6 +34,4 @@ for f=1:sz
     box_caviar(f, :) = cbox;
 end
 
-[pstr, nm, ext] = fileparts(fnm);
-
-save(strcat(pstr, nm, '.mat'), 'box_caviar');
+save(fnm_mat, 'box_caviar');
