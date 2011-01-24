@@ -1,5 +1,7 @@
-@ilke hocam burayı güncelle
+
 
 - hem video hem de xml için doğrudan link
 
-- `xml_toolbox` nereden temin edilir ve nasıl kurulur?
+-'xml_toolbox'ı http://www.mathworks.com/matlabcentral/fileexchange/4278 linkinden indiriniz.
+
+- 'xml_toolbox' ı kurmak için dosya içindeki INSTALL.txt'i okuyunuz.
