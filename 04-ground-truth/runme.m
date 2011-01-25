@@ -22,15 +22,15 @@ rect(:, 4) = box_caviar(:, 4);
 
 for f=1:10:sz%1:sz
     if dbg, fprintf('%04d. fram isleniyor...\n', f);    end
-    
+
     frm = imread(strcat(dbnm, DIR(f).name));
-    
+
     if dbg,
-        figure(1),  
-        imshow(frm),    
+        figure(1),
+        imshow(frm),
         if rect(f, 1) > 0
             hold on
-            rectangle('Position', rect(f, :), 'EdgeColor', 'g', 'LineWidth', 1);  
+            rectangle('Position', rect(f, :), 'EdgeColor', 'g', 'LineWidth', 1);
             hold off
         end
         drawnow;

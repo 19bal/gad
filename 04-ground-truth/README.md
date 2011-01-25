@@ -1,7 +1,18 @@
-- Video'yu http://groups.inf.ed.ac.uk/vision/CAVIAR/CAVIARDATA2/OneStopMoveNoEnter1front/OneStopMoveNoEnter1front.mpg adresinden temin edin.
 
-- Bu video'nun xml dosyasını http://groups.inf.ed.ac.uk/vision/CAVIAR/CAVIARDATA2/OneStopMoveNoEnter1front/fosmne1gt.xml adresinden indirin.
+1. [Video](http://groups.inf.ed.ac.uk/vision/CAVIAR/CAVIARDATA2/OneStopMoveNoEnter1front/OneStopMoveNoEnter1front.mpg) temin et 
+   ve `*.png` resimleri üret.
 
-- 'xml_toolbox'ı http://www.mathworks.com/matlabcentral/fileexchange/4278 adresinden indiriniz.
+    + `ffmpeg -i OneStopMoveNoEnter1front.mpg frame%04d.png`
 
-- 'xml_toolbox' ı kurmak için indirdiğiniz dosya içindeki INSTALL.txt'i okuyunuz.
+	+ bu resimleri, bu dizinde `_db/orj/` klasörü altına koy
+
+2. Bu video'nun [xml](http://groups.inf.ed.ac.uk/vision/CAVIAR/CAVIARDATA2/OneStopMoveNoEnter1front/fosmne1gt.xml) ilgili adresten indir.
+
+    + [xml toolbox](http://www.mathworks.com/matlabcentral/fileexchange/4278) adresinden indirin.
+
+	+ `xml_toolbox` ı kurmak için indirdiğiniz dosya içindeki `INSTALL.txt`'i okuyunuz.
+
+	+ indirdiğiniz `fosmne1gt.xml` dosyasını, bu dizinde `_db/` klasörü altına
+	  koyunuz.
+
+3. `runme.m`'i çalıştır.
