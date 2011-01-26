@@ -1,4 +1,9 @@
 ilgi: @erdem
+
+Bununla alakalı BAP projesi hazırlanıyor.
+
+## Diğer
+
 \#Num: #4
 
 Perde kurulması, çekimler yapılmasıyla ilgili yapılanlar ve gerçeklemeler vs buraya konulacak.
