@@ -2,9 +2,9 @@ function frm2bw_db(dbnm, dbnm_bw, bg, dbg);
 % function frm2bw_db(dbnm, dbnm_bw, bg, dbg)
 
 mkdir(dbnm_bw);
-DIR = dir(strcat(dbnm, '*.png'));
+DIR = dir(strcat(dbnm, '*.bmp'));
 
-Nf = 55:108;    %max(Nbg)+1:length(DIR);    % diger frameler
+Nf = 55:100;    %max(Nbg)+1:length(DIR);    % diger frameler
 
 ind = 1;
 mc = 25;    Mc = 45;
@@ -46,9 +46,9 @@ for f=Nf,
         subplot(224);   imshow(rimg);
     end
     
-    gifIMG(:,:,1,ind) = rimg;    
-    ind = ind + 1;
+    %gifIMG(:,:,1,ind) = rimg;    
+    %ind = ind + 1;
     imwrite(rimg, strcat(dbnm_bw, imgnm));
 end
-imwrite(gifIMG, strcat(dbnm_bw, 'anim.gif'), 'DelayTime',0,'LoopCount',inf);
+%imwrite(gifIMG, strcat(dbnm_bw, 'anim.gif'), 'DelayTime',0,'LoopCount',inf);
 

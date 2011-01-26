@@ -19,7 +19,8 @@ for f = 1:sz,
     imgnm = DIR(f).name;    
     bw = imread(strcat(dbnm, imgnm));
     
-    BB = fe_bauckhage09(bw, nr, nc, true, false);
+    BB = fe_bauckhage09(bw, nr, nc, false, false);
+    Dist = fe_bauckhage09_dist(bw, nr, nc, false);
     
     if dbg
         figure(1);
@@ -31,5 +32,8 @@ for f = 1:sz,
             end
         end        
         hold off       
+        
+        figure(2);  plot(Dist); grid on;
+        
     end    
 end

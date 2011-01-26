@@ -2,7 +2,7 @@
 clear all; close all;  clc;
 dbg = true;
 
-dbnm = pathos('../../db/gait/');
+dbnm = pathos('_db/original/'); %pathos('../../db/gait/');
 mkdir(pathos('_db/'));
 dbnm_bw = pathos('_db/bw/');
 
